@@ -4,7 +4,7 @@
 
 # import random
 # N = random.randrange(10)+1
-# #K = random.uniform(-10, 10)
+# # K = random.uniform(-10, 10)
 # K = random.randrange(-10, 10)
 
 # print('K = ', K)
@@ -121,11 +121,11 @@
 #     print()
 #9
 class Uy:
-    def init(self,turi,xonasi,rangi,balandligi):
-        self.turi = turi
-        self.xonasi = xonasi
-        self.rangi = rangi
-        self.balandligi = balandligi
+    def __init__(self,turi,xonasi,rangi,balandligi):
+        self.Turi = turi
+        self.Xonasi = xonasi
+        self.Rangi = rangi
+        self.Balandligi = balandligi
     def str(self):
         return "Turi:\t"+self.turi + "Xonasi:\t"+self.xonasi + "Rangi:\t"+self.rangi + "Balandligi:\t"+self.balandligi
     
@@ -134,26 +134,26 @@ while True:
     print("1-Uyni qo'shish\n2-ro'yxatni chiqarish\n3-turi bo'yicha tartiblash\n4-xonasi bo'yicha tartiblash\nq-quit")
     cmd = input()
     if cmd == "1":
-        turi = input("TURni kiriting:")
+        turi = input("Turni kiriting:")
         Xonasi = input("Xonasini kiriting:")
         Rangini = input("Rangini kiriting:")
         Balandligini = input("Balandligini kiriting:")
 
-        home = Uy(Turi,xonasi,rangi,balandligi)
-        Uytlist.append(home)
+        home = Uy(turi,Xonasi,Rangini,Balandligini)
+        Uylist.append(home)
     elif cmd == "2":
         print("____UY RO'YXATI___")
-        for home in Uytlist:
+        for home in Uylist:
             print(home)
         print("_____________________________________")
     elif cmd == "3":
-        sortedList = uylist
+        sortedList = Uylist
         sortedList.sort(key=lambda x:x.kurs)
         for i in sortedList:
             print(i)
 
     elif cmd == "4":
-        sortedList = uylist
+        sortedList = Uylist
         sortedList.sort(key=lambda x:x.age)
         for i in sortedList:
             print(i)
